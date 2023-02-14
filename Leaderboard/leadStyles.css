@@ -1,0 +1,70 @@
+*{
+  background-color: #000000;
+}
+
+.bod{
+  background: #000000;
+}
+/* .lead{
+  position:absolute;
+  top: 2873px;
+  font-family: 'Poppins';
+font-style: normal;
+color: #FFFFFF;
+} */
+
+.lead{
+  color: #FFFFFF;
+  font-size: 70px;
+
+}
+
+.sre{
+  font-size: 109.985px;
+}
+
+.pos{
+  position: absolute;
+  top: 3114px;
+}
+
+.my-custom-scrollbar {
+position: relative;
+height: 400px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+td:nth-child(1){
+  width: 70%;
+  text-align: center;
+}
+
+td:nth-child(2){
+  text-align: center;
+}
+
+.full_board{
+  width: 100vh;
+  height: 100vh;
+
+}
+
+#board{
+  width: 80%;
+  margin: auto;
+}
+
+.edit{
+  background: linear-gradient(269.34deg, #9F41FE 5.06%, #A81C1C 185.18%);
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 20px;
+border-color: #000000;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+color: #FFFFFF;
+}
