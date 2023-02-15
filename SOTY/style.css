@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding 0;
+}
+
 #man_pic {
     width: 60%;
 }
