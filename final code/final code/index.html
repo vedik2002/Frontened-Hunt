@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOTY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark" id="navi">
+    <div class="container">
+      <img src="./img/logo white (2).png" alt="" id="mfc">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="colapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-1">LEADEROARD</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-1">HINTS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="text-light p-2" id="title_section">
+    <div class="container">
+      <div class="d-flex align-items-center">
+        
+        <img src="./img/logo (2).png" alt="" id="logo">
+      </div>
+    </div>
+  </section>
+
+  <div class="row scan_div">
+    
+    <div class="col" id="scan">
+      <img src="./img/qrcode2-removebg-preview 1.png" id="qr" alt="">
+
+      <button class="bton" id="scan_btn">SCAN HERE</button>
+    </div>
+  </div>
+
+
+  
+<div class="inf">
+<div class="about_us">
+  
+  <h2 class="about_title">Event Guidlines</h2>
+  
+  <div class="aboutus text-center" >
+    <h5>Rules & Regulations:</h5>
+
+Penalties
+<br>- No use of transport <font color="pink">(100 points deduction) </font> <br>
+- All the members need to stick together and work on a single hint at a time. If found malpracticing, first warning with <font color="pink">(200 points deduction) </font> leading to disqualification if found next time.
+<br>- Asking coordinators for the hints <font color="pink">(100 points deduction) </font>.<br>
+<br>- Found interacting with members of other teams, first warning with <font color="pink">(200 points deduction) </font> leading to the disqualification if found next time.<br>
+<br>Disqualification<br>
+- Damaging QR codes
+<br>- Multiple penalties will lead to direct disqualification.<br>
+<br>- We are closely monitoring your activities, multiple device log in is prohibited<br>
+
+  </div>
+</div>
+</div>
+
+
+
+
+  <div class="hints_section">
+    <h2 class="hints_title">Hints</h2>
+    <div class="hints_section">
+      <div class="hint1 hint">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique aliquam quis deserunt eos
+        accusantium? Nam praesentium repudiandae sed quia at molestias distinctio. Molestias eius voluptate
+        accusantium magni reiciendis expedita?
+      </div>
+      <div class="hint2 hint">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique aliquam quis deserunt eos
+        accusantium? Nam praesentium repudiandae sed quia at molestias distinctio. Molestias eius voluptate
+        accusantium magni reiciendis expedita?
+      </div>
+      <div class="hint3 hint">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique aliquam quis deserunt eos
+        accusantium? Nam praesentium repudiandae sed quia at molestias distinctio. Molestias eius voluptate
+        accusantium magni reiciendis expedita?
+      </div>
+    </div>
+  </div>
+
+  <div class="bod">
+
+    <div class="container-sm full_board">
+      <div class="text-center">
+        <div class="text-center">
+          <h2 class="leada">Leaderboard</h2>
+        </div>
+      </div>
+      <div id="board" class="pos">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+          <table class="table table-bordered border-mb-0">
+            <tbody class="l_table"></tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/
+  bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+
+  NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script>
+    var tableBody = document.querySelector(".l_table");
+
+    // Create three rows and add them to the table body
+    for (var i = 1; i <= 70; i++) {
+      // Create a new row element
+      var newRow = document.createElement("tr");
+      newRow.className = "edit";
+      newRow.id = i;
+
+      // Create three data cells and add them to the row
+      var nameCell = document.createElement("td");
+      var ageCell = document.createElement("td");
+      nameCell.textContent = "Team " + i;
+      ageCell.textContent = 0;
+      newRow.appendChild(nameCell);
+      newRow.appendChild(ageCell);
+
+      // Add the row to the table body
+      tableBody.appendChild(newRow);
+    }
+  </script>
+  <div class="footer">
+    <div class="up">
+        <div class="links">
+            <h3>LINKS</h3>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#domain">Domains</a></li>
+            <li><a href="#event">Events</a></li>
+            <li><a href="#blog">Blogs</a></li>
+            <li><a href="#team">Team</a></li>
+        </div>
+        <div class="olinks">
+            <h3>OTHER LINKS</h3>
+            <li><a href="#">Upcoming</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Sponser Us ?</a></li>
+            <li><a href="#">MFC Outreach</a></li>
+        </div>
+    </div>
+    <hr>
+    <div class="down">
+        <div class="icons">
+            <a href=""><img src="./img/f.png" alt="fb"></a>
+            <a href=""><img src="./img/i.png" alt="instagram"></a>
+            <a href=""><img src="./img/y.png" alt="youtube"></a>
+            <a href=""><img src="./img/l.png" alt="linkedin"></a>
+            <a href=""><img src="./img/g.png" alt="github"></a>
+            <a href=""><img src="./img/p.png" alt="phone"></a>
+            <a href=""><img src="./img/m.png" alt="mail"></a>
+        </div>
+        <p>© 2022 Copyright: Mozilla FireFox Club, VIT</p>
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
