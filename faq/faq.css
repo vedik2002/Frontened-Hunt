@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.faq {
+  background-color: black;
+  color: white;
+}
+
+.faq_title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 100%;
+  padding: 6px;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.085em;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background: linear-gradient(91.48deg, #131313 -3.1%, rgba(224, 86, 253, 0) 211.9%);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 1rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 18px;
+  background: linear-gradient(91.48deg, #131313 -3.1%, rgba(224, 86, 253, 0) 211.9%);
+  display: none;
+  overflow: hidden;
+  color: white;
+}
