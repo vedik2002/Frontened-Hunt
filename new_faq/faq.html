@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOTY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="faq.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" id="navi">
+        <div class="container">
+            <img src="./img/logo white (2).png" alt="" id="mfc">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="colapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#red" class="nav-link mx-1">LEADEROARD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gre" class="nav-link mx-1">HINTS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="text-light p-2" id="title_section">
+        <div class="container">
+            <div class="d-flex align-items-center">
+
+                <img src="./img/logo (2).png" alt="" id="logo">
+            </div>
+        </div>
+    </section>
+
+    <div class="scan_div">
+
+        <div class="" id="scan">
+            <img src="./img/qrcode2-removebg-preview 1.png" id="qr" alt="">
+
+            <button class="bton" id="scan_btn">SCAN HERE</button>
+        </div>
+    </div>
+
+
+
+    <div class="inf pad">
+        <div class="about_us">
+
+            <h2 class="about_title">Event Guidlines</h2>
+
+            <div class="aboutus text-center">
+                <h5>Rules & Regulations:</h5>
+
+                Penalties
+                <br>- No use of transport <font color="pink">(100 points deduction) </font> <br>
+                - All the members need to stick together and work on a single hint at a time. If found malpracticing,
+                first warning with <font color="pink">(200 points deduction) </font> leading to disqualification if
+                found next time.
+                <br>- Asking coordinators for the hints <font color="pink">(100 points deduction) </font>.<br>
+                <br>- Found interacting with members of other teams, first warning with <font color="pink">(200 points
+                    deduction) </font> leading to the disqualification if found next time.<br>
+                <br>Disqualification<br>
+                - Damaging QR codes
+                <br>- Multiple penalties will lead to direct disqualification.<br>
+                <br>- We are closely monitoring your activities, multiple device log in is prohibited<br>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="hints_section pad" id="gre">
+        <h2 class="hints_title">Hints</h2>
+        <div class="hints_section">
+            <div class="hint1 hint">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique aliquam quis deserunt eos
+                accusantium? Nam praesentium repudiandae sed quia at molestias distinctio. Molestias eius voluptate
+                accusantium magni reiciendis expedita?
+            </div>
+            <div class="hint2 hint text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique aliquam quis deserunt eos
+                accusantium? Nam praesentium repudiandae sed quia at molestias distinctio. Molestias eius voluptate
+                accusantium magni reiciendis expedita?
+            </div>
+            <div class="hint3 hint">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique aliquam quis deserunt eos
+                accusantium? Nam praesentium repudiandae sed quia at molestias distinctio. Molestias eius voluptate
+                accusantium magni reiciendis expedita?
+            </div>
+        </div>
+    </div>
+
+    <div class="bod pad">
+
+        <div class="container-sm full_board">
+            <div class="text-center">
+                <div id="red" class="text-center">
+                    <h2 class="leada">Leaderboard</h2>
+                </div>
+            </div>
+            <div id="board" class="pos">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                    <table class="table table-bordered border-mb-0">
+                        <tbody class="l_table"></tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/
+  bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+
+  NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+    <script>
+        var tableBody = document.querySelector(".l_table");
+
+        // Create three rows and add them to the table body
+        for (var i = 1; i <= 80; i++) {
+            // Create a new row element
+            var newRow = document.createElement("tr");
+            newRow.className = "edit";
+            newRow.id = i;
+
+            // Create three data cells and add them to the row
+            var nameCell = document.createElement("td");
+            var ageCell = document.createElement("td");
+            nameCell.textContent = "Team " + i;
+            ageCell.textContent = 0;
+            newRow.appendChild(nameCell);
+            newRow.appendChild(ageCell);
+
+            // Add the row to the table body
+            tableBody.appendChild(newRow);
+        }
+    </script>
+
+    <!-- <div id="el" class="faq">
+    <h2 class="faq_title">Frequently Asked</h2>
+    <h2 class="faq_title">Questions</h2>
+
+    <div class="questions">
+      <ul class="accordion">
+        <li>
+          <input type="radio" name="accordion" id="first">
+          <label for="first">What are the Rules & Regulations?</label>
+          <div class="content">
+            <br>Penalties<br>
+            <br>No use of transport <font color="pink">(100 points deduction) </font><br>
+            <br>All the members need to stick together and work on a single hint at a time. If found malpracticing, first warning with <font color="pink">(100 points deduction) </font> leading to disqualification if found next time.<br>
+            <br>Asking coordinators for the hints <font color="pink">(100 points deduction) </font>.<br>
+            <br>Found interacting with members of other teams, first warning with <font color="pink">(100 points deduction) </font> leading to the disqualification if found next time.<br>
+            <br>Disqualification<br>
+            <br>Damaging QR codes<br>
+            <br>Above mentioned disqualifications<br>
+            <br>A team gets a complimentary small game, if they win they get a chance to choose a power randomly. And after that if they want to play a small game again they can play but for a price of 150 points.<br>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="second">
+          <label for="second">can we split up in sub-groups when looking for solutions?</label>
+          <div class="content">
+            <p>Groups must stay together – no splitting up.</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="third">
+          <label for="third">Do we need to follow the order of the clues provided to us?</label>
+          <div class="content">
+            <p>You do not have to follow the display order of the clues. In fact, you shouldn’t.</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fourth">
+          <label for="fourth">How do we win?</label>
+          <div class="content">
+            <p>Either you can rest or earn more points by solving bonus clues given to you.</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fifth">
+          <label for="fifth">What do we do after we finish the hints allotted to us?</label>
+          <div class="content">
+            <p>Either you can rest or earn more points by solving bonus clues given to you.</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="sixth">
+          <label for="sixth">What happens if I break the rules?</label>
+          <div class="content">
+            <p>you will we punished according to the rules and regulations mentioned above.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+    <div class="faq">
+        <h2 class="faq_title">Frequently Asked</h2>
+        <h2 class="faq_title">Questions</h2>
+
+        <div class="questions">
+            <div class="faq">
+                <button class="accordion">What are the Rules & Regulations?</button>
+                <div class="panel">
+                    <br>Penalties<br>
+                    <br>No use of transport <font color="pink">(100 points deduction) </font><br>
+                    <br>All the members need to stick together and work on a single hint at a time. If found
+                    malpracticing, first warning with <font color="pink">(100 points deduction) </font> leading to
+                    disqualification if found next time.<br>
+                    <br>Asking coordinators for the hints <font color="pink">(100 points deduction) </font>.<br>
+                    <br>Found interacting with members of other teams, first warning with <font color="pink">(100 points
+                        deduction) </font> leading to the disqualification if found next time.<br>
+                    <br>Disqualification<br>
+                    <br>Damaging QR codes<br>
+                    <br>Above mentioned disqualifications<br>
+                    <br>A team gets a complimentary small game, if they win they get a chance to choose a power
+                    randomly. And after that if they want to play a small game again they can play but for a price of
+                    150 points.<br>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">Can we split up in sub-groups when looking for solutions?</button>
+                <div class="panel">
+                    <p>Groups must stay together – no splitting up.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">Do we need to follow the order of the clues provided to us?</button>
+                <div class="panel">
+                    <p>You do not have to follow the display order of the clues. In fact, you shouldn’t.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">How do we win?</button>
+                <div class="panel">
+                    <p>Either you can rest or earn more points by solving bonus clues given to you.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">What do we do after we finish the hints allotted to us?</button>
+                <div class="panel">
+                    <p>Either you can rest or earn more points by solving bonus clues given to you.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">What happens if I break the rules?</button>
+                <div class="panel">
+                    <p>you will we punished according to the rules and regulations mentioned above.</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- <div class="footer">
+    <div class="up">
+        <div class="links">
+            <h3>LINKS</h3>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#domain">Domains</a></li>
+            <li><a href="#event">Events</a></li>
+            <li><a href="#blog">Blogs</a></li>
+            <li><a href="#team">Team</a></li>
+        </div>
+        <div class="olinks">
+            <h3>OTHER LINKS</h3>
+            <li><a href="#">Upcoming</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Sponser Us ?</a></li>
+            <li><a href="#">MFC Outreach</a></li>
+        </div>
+    </div>
+    <hr>
+    <div class="down">
+        <div class="icons">
+            <a href=""><img src="./img/f.png" alt="fb"></a>
+            <a href=""><img src="./img/i.png" alt="instagram"></a>
+            <a href=""><img src="./img/y.png" alt="youtube"></a>
+            <a href=""><img src="./img/l.png" alt="linkedin"></a>
+            <a href=""><img src="./img/g.png" alt="github"></a>
+            <a href=""><img src="./img/p.png" alt="phone"></a>
+            <a href=""><img src="./img/m.png" alt="mail"></a>
+        </div>
+        <p>© 2022 Copyright: Mozilla FireFox Club, VIT</p>
+    </div>
+</div> -->
+        <div class="rect">
+            <footer class="footer">
+                <ul class="social-icon">
+                    <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/mfcvit/">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a></li>
+                    <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/MFC-VIT">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a></li>
+                    <li class="social-icon__item"><a class="social-icon__link"
+                            href="https://www.linkedin.com/company/mfcvit/mycompany/">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a></li>
+                    <li class="social-icon__item"><a class="social-icon__link"
+                            href="https://www.instagram.com/mfc_vit/?hl=en">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a></li>
+                </ul>
+
+                <p class="text-center">&copy;2023 MOZILLA FIREFOX CLUB | All Rights Reserved</p>
+            </footer>
+        </div>
+
+        <script src="faq.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
