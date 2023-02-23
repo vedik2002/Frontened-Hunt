@@ -44,6 +44,10 @@ section {
   font-size: 1.5vw;
 }
 
+.nav-item1.nav-link mx-1 {
+  font-size: 2.5vw;
+}
+
 .nav-link {
   font-size: 1.5vw;
   color: white !important;
